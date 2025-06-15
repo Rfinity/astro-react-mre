@@ -1,0 +1,16 @@
+---
+import defaultProfileIcon from '../../assets/default-user-icon.svg';
+
+interface Props {
+    profileIcon?: ImageMetadata | null;
+}
+
+const { profileIcon = null } = Astro.props;
+---
+
+<div class="flex items-center gap-2 font-bold text-white py-2 px-6">
+  <span class="w-6 h-6 rounded-full overflow-hidden flex items-center justify-center">
+    <img src={profileIcon?.src || defaultProfileIcon.src} alt="Profile" class="w-full h-full object-cover" />
+  </span>
+  <span>Logged In</span>
+</div>

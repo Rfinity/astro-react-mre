@@ -1,12 +1,15 @@
 ---
 import background from '../assets/background.svg';
+import LoginContainer from '../components/login/LoginContainer.astro';
+import ToggleButton from '../components/login/ToggleButton';
 ---
 
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
+	<ToggleButton client:load />
 	<main>
 		<section id="hero">
-			Hello
+			<LoginContainer />
 		</section>
 	</main>
 </div>

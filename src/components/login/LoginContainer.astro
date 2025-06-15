@@ -1,0 +1,10 @@
+---
+import LoginComponent from './LoginComponent';
+import LoginButton from './LoginButton';
+import ProfileIndicator from './ProfileIndicator.astro';
+---
+
+<LoginComponent client:load>
+    <LoginButton client:load slot="login-button" />
+    <ProfileIndicator slot="profile-indicator" />
+</LoginComponent>
